@@ -1,0 +1,27 @@
+<main>
+  <div>
+    <mat-form-field appearance="fill" class="search">
+      <mat-label>Search for a Country</mat-label>
+      <input matInput [(ngModel)]="search" (ngModelChange)="getCountries()" />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Filter by Region</mat-label>
+      <mat-select [(ngModel)]="region" (ngModelChange)="getCountries()">
+        <mat-option value="All">All</mat-option>
+        <mat-option value="Africa">Africa</mat-option>
+        <mat-option value="Americas">America</mat-option>
+        <mat-option value="Asia">Asia</mat-option>
+        <mat-option value="Europe">Europe</mat-option>
+        <mat-option value="Oceania">Oceania</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="card-wrapper">
+    @if (countries$ | async; as countries) {
+    @for (country of countries; track country.name) {
+    <app-card [routerLink]="country.name | lowercase" [country]="country"></app-card>
+    }
+    }
+  </div>
+</main>

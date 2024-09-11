@@ -1,0 +1,28 @@
+main>div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5vw;
+  max-width: 1200px;
+  margin: auto auto;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.search {
+  min-width: 400px;
+}
+
+.card-wrapper {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+@media (max-width: 600px) {
+  .search {
+    min-width: 100%;
+  }
+}

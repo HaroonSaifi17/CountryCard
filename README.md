@@ -2,26 +2,27 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
 
-## Development server
+## Why use SSR?
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+We have a large dataset to load, so using SSR (Server-Side Rendering) helps improve the performance of the application by reducing the time to first meaningful paint and handling large amounts of data more efficiently.
 
-## Code scaffolding
+## Why use Angular Material?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+I wanted to gain hands-on experience with Angular Material, and this project provided an opportunity to implement it.
 
-## Build
+## Why use `data.ts` instead of a JSON file?
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+By using `data.ts`, I can ensure that data is validated and typed correctly at compile time, reducing the risk of runtime errors due to incorrect or malformed data.
 
-## Running unit tests
+## Why is the UI not more polished?
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The primary focus of this project is performance and functionality, not UI/UX design. However, I still aimed to make the UI reasonably user-friendly.
 
-## Running end-to-end tests
+## Why not use a Backend?
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+The project specifications did not require a backend, so I opted for a simple `data.ts` file to store and serve data, minimizing complexity.
 
-## Further help
+## Why not clean the Data?
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Given the sheer volume of data, manually cleaning it would have been time-consuming. For the sake of focusing on other key areas, I chose to work with the data as-is.
+

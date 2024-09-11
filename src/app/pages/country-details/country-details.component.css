@@ -1,0 +1,48 @@
+main{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 5vw;
+}
+main>button{
+  margin: 20px 0;
+  color: black;
+}
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+.card-wrapper>div {
+  flex: 1;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  min-width: 300px;
+}
+.details {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  min-width: 500px;
+}
+.details>div {
+  flex: 1;
+  min-width: 150px;
+}
+.button-wrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.button-wrapper>button {
+  color: black;
+}
+@media (max-width: 768px) {
+  .details {
+    min-width: 300px;
+  }
+}

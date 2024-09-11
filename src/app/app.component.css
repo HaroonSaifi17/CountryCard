@@ -1,0 +1,19 @@
+header {
+  border-bottom: 1px solid #ccc;
+}
+
+header>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5vw;
+  max-width: 1400px;
+  margin: auto auto;
+  flex-wrap: wrap;
+}
+
+header>div>button {
+  color: black;
+}
+
+

@@ -1,0 +1,49 @@
+<main>
+  <button mat-stroked-button routerLink="/">
+    <mat-icon>arrow_back</mat-icon> Back
+  </button>
+  @if (country$ | async; as country) {
+  <div class="card-wrapper">
+    <div>
+      <img [src]="country.flag" [alt]="country.name" />
+    </div>
+    <div>
+      <h2>{{ country.name }}</h2>
+      <div class="details">
+        <div>
+          <p><strong>Native Name:</strong> {{ country.nativeName }}</p>
+          <p><strong>Population:</strong> {{ country.population }}</p>
+          <p><strong>Region:</strong> {{ country.region }}</p>
+          <p><strong>Sub Region:</strong> {{ country.subregion }}</p>
+          <p><strong>Capital:</strong> {{ country.capital }}</p>
+        </div>
+        <div>
+          <p>
+            <strong>Top Level Domain:</strong> {{ country.topLevelDomain }}
+          </p>
+          <p>
+            <strong>Currencies: </strong>
+            @for (currency of country.currencies; track currency) {
+            <span>{{ currency.name }} ({{ currency.code }}) </span>
+            }
+          </p>
+          <p>
+            <strong>Languages: </strong>
+            @for (lang of country.languages; track lang) {
+            <span>{{ lang.name }} </span>
+            }
+          </p>
+        </div>
+      </div>
+      <div>
+        <p><strong>Border Countries:</strong></p>
+        <div class="button-wrapper">
+          <button mat-stroked-button *ngFor="let border of country.borders" [routerLink]="border | lowercase">
+            {{ border }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</main>
